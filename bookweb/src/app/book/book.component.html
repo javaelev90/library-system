@@ -1,0 +1,11 @@
+<div class="row">
+  <div class="col">Title:<input [(ngModel)]="book.title" value="{{book.title}}"></div>
+  <div class="col">Description:<input [(ngModel)]="book.description" value="{{book.description}}"></div>
+  <div class="col">
+    Authors:
+    <div *ngFor="let author of book.authorList">
+      Firstname:<input [(ngModel)]="author.firstName" value="{{author.firstName}}"> Lastname:<input [(ngModel)]="author.lastName"  value="{{author.lastName}}">
+    </div>
+    <button class="col" (click)="update()">Update</button>
+  </div>
+</div>
